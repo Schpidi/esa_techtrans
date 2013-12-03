@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>ESA Dienste für Nutzer von Erdbeobachtungsdaten basierend auf Open Source</title>
+
+        <meta name="description" content="Präsentation für den ESA Technologie Transfer Tag am 5. Dezember 2013 in Wien.">
+        <meta name="author" content="Stephan Meissl">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="reveal.js/css/theme/eox.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <section>
+                    <h2>ESA Dienste für Nutzer von Erdbeobachtungsdaten basierend auf Open Source</h2>
+                    <br/>
+                    <a class="image" href="http://eox.at"><img src="./images/EOX_Logo.png" alt="EOX IT Services GmbH, Austria" title="EOX IT Services GmbH, Austria"/></a>
+                    <p><a href="mailto:office@eox.at">office@eox.at</a> <a href="https://twitter.com/eox_a">@eox_a</a></p>
+                    <p>Stephan Meißl <a href="mailto:stephan.meissl@eox.at">stephan.meissl@eox.at</a> <a href="https://twitter.com/Schpidi">@Schpidi</a></p>
+                    <p></p>
+                    <br/>
+                    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin:0 0 12px 0;" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><small>&nbsp;This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</small></p>
+                    <aside class="notes">
+                        <p>Sehr geehrte Damen und Herren. Vielen Dank für die Einladung hier heute einige Highlights unserer Arbeit zu präsentieren.</p>
+                        <p></p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Inhalt</h2>
+                    <ul>
+                        <li class="fragment">ESA User Services - ngEO</li>
+                        <li class="fragment">EOX Maps</li>
+                        <li class="fragment">EU-DEM</li>
+                    </ul>
+                    <aside class="notes">
+                        <p></p>
+                    </aside>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="http://v1.ngeo.eox.at/">Live Demonstration ngEO</a></h2>
+                        <p><a href="http://v1.ngeo.eox.at/"><img style="height: 600px;" src="./images/screenshot_ngeo_start.png" alt="Live Demonstration ngEO" title="Live Demonstration ngEO"/></a></p>
+                        <aside class="notes">
+                            <p>Bitte um Nachsicht, dieses Service ist gerade erst im Entstehen und daher nicht besonders stabil.</p>
+                            <p>Die Screenshots sind als Backup gedacht falls die Live Vorführung nicht klappt.</p>
+                            <p>Hier können Sie den ngEO Client nach dem Starten sehen. Es ist noch kein Datensatz ausgewählt und keine Such durchgeführt.</p>
+                            <p>Bitte merken Sie sich die Karte im Hintergrund, dazu komme ich später noch genauer.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Suche</h2>
+                        <img style="height: 600px;" src="./images/screenshot_ngeo_search.png" alt="Suche" title="Suche"/>
+                        <aside class="notes">
+                            <p></p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>3D</h2>
+                        <img style="height: 600px;" src="./images/screenshot_ngeo_3d.png" alt="3D" title="3D"/>
+                        <aside class="notes">
+                            <p></p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>ESA User Services - ngEO</h2>
+                        <ul>
+                            <li class="fragment">Operational Fully Online Data Access Service</li>
+                            <li class="fragment">GMES and ESA Legacy Satellite Missions</li>
+                            <li class="fragment">Fully Centralised Configuration Management</li>
+                            <li class="fragment">Generic System usable for any Mission</li>
+                        </ul>
+                        <aside class="notes">
+                            <p>The main objective of the new ESA User Services is to provide a fully Online Operational Data Access Service.</p>
+                            <p>ESA provides access to satellite data from the European initiative GMES which stands for Global Monitoring for Environment &amp; Security or, as it is called nowadays, Copernicus as well as ESA's legacy missions like Envisat.</p>
+                            <p>Another objective of the new system is a Fully Centralised Configuration Management. I come back to that in a second.</p>
+                            <p>In summary ESA wants to develop a generic system that is easily usable for any mission.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h3>ngEO Browse Server - Architektur</h3>
+                        <img src="./images/browse_server_architecture.png" alt="Browse Server Architektur" title="Browse Server Architektur"/>
+                        <aside class="notes">
+                            <ul>
+                                <li>Ausschließlich basierend auf Open Source Software wie</li>
+                                <ul>
+                                    <li><a href="http://gdal.org">GDAL</a> für raster prozessing</li>
+                                    <li><a href="http://mapserver.org">MapServer</a> für OGC Unterstützung</li>
+                                    <li><a href="http://eoxserver.org">EOxServer</a> für Erdbeobachtungserweiterungen der OGC Standards</li>
+                                    <li><a href="http://mapserver.org/mapcache/index.html">MapCache</a> für extrem hochperformanten WMTS und WMS Zugang</li>
+                                </ul>
+                                <li>Standardkonforme Auslieferung von Karten und Vorschaubildern (Browse Images) via OGC WMTS und WMS</li>
+                                <li>Zentrales Konfigurationsmanagement durch ngEO Controller</li>
+                                <li>Daten von ngEO FEED</li>
+                                <li>Authentifizierung mit Shibboleth</li>
+                                <li>Autorisierung durch ngEO Web Server</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Preprocessing</h2>
+                        <ul>
+                            <li class="fragment">Input Geographic Metadata for Geo-referencing</li>
+                            <ul class="fragment">
+                                <li>Footprint polygon</li>
+                                <li>Regular grid of tiepoints</li>
+                                <li>Pre-georeferenced images</li>
+                            </ul>
+                            <li class="fragment">Optimizations</li>
+                            <ul class="fragment">
+                                <li>Footprint generation</li>
+                                <li>Re-projection</li>
+                                <li>Addition of alpha-channel</li>
+                                <li>Internal tilling</li>
+                                <li>Overviews</li>
+                                <li>Compression</li>
+                            </ul>
+                        </ul>
+                        <aside class="notes">
+                            <p>TBD</p>
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="http://maps.eox.at">Live Demonstration EOX Maps</a></h2>
+                        <a href="http://maps.eox.at"><img style="height: 600px;" src="./images/screenshot_eoxmaps.png" alt="Live Demonstration EOX Maps" title="Live Demonstration EOX Maps"/></a>
+                        <aside class="notes">
+                            <p>Ich werde nun versuchen eine Live Vorführung unserer EOX Maps zu geben und hoffe das WLan ist schnell genug.</p>
+                            <p>Vielleicht können jetzt kurz alle aufhören Youtube Videos zu schauen, Facebook und Twitter ist OK ;)</p>
+                            <p>Die Screenshots sind als Backup gedacht falls die Live Vorführung nicht klappt.</p>
+                            <p>Hier sehen Sie im übrigen unseren Terrain Layer oder auch Geländekarte, basierend unter anderem auf OpenStreetMap, EU-DEM (siehe später), und GlobCover Daten und von EOX designed. Diese Daten sind alle sogenannte Open Data also frei verfügbar.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Zeitachse / Time Slider</h2>
+                        <img style="height: 600px;" src="./images/screenshot_eoxmaps_timeslider.png" alt="Time Slider" title="Time Slider"/>
+                        <aside class="notes">
+                            <p>Haben Sie die Zeitachse den sogenannten Time Slider am unteren Rand bemerkt?</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Gesamter EO Datensatz</h2>
+                        <img style="height: 600px;" src="./images/screenshot_eoxmaps_entiredataset.png" alt="Gesamter EO Datensatz" title="Gesamter EO Datensatz"/>
+                        <aside class="notes">
+                            <p>Dieser WMS Layer zeigt den gesamten Datensatz aus ca. 15.000 Produkten oder Browse Bildern. Deshalb ist der Time Slider ausgeblendet.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Wien</h2>
+                        <img style="height: 600px;" src="./images/screenshot_eoxmaps_wien_level10.png" alt="Wien" title="Wien"/>
+                        <aside class="notes">
+                            <p>Hier ist Wien in der Zoomstufe 10 zu sehen.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Wien &amp; EO</h2>
+                        <img style="height: 600px;" src="./images/screenshot_eoxmaps_wien_eo_level10.png" alt="Wien & EO" title="Wien & EO"/>
+                        <aside class="notes">
+                            <p>Hier mit Erdbeobachtungsdaten.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>max-cached-zoom</h2>
+                        <img style="height: 600px;" src="./images/screenshot_eoxmaps_wien_eo_level12.png" alt="max-cached-zoom" title="max-cached-zoom"/>
+                        <aside class="notes">
+                            <p>Wie sehen können werden die Erdbeobachtungsdaten auch in Zoomstufe 12 noch angezeigt obwohl keine zusätzlichen Informationen geladen worden sind.</p>
+                            <p>Die maximale Auflösung der Übersichts- oder Browse Daten wurde schon mit Zoomstufe 10 erreicht.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>EOX Maps</h2>
+                        <ul>
+                            <li>Start in Vorbereitung</li>
+                            <li>Nähere Informationen</li>
+                            <ul>
+                                <li><a href="http://maps.eox.at">http://maps.eox.at</a></li>
+                                <li><a href="https://twitter.com/eox_a">@eox_a</a> auf Twitter</li>
+                            </ul>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2><a href="">Live Demonstration EU-DEM</a></h2>
+                        <p><a href=""><img style="height: 600px;" src="./images/screenshot_eudem.png" alt="Live Demonstration EU-DEM" title="Live Demonstration EU-DEM"/></a></p>
+                        <aside class="notes">
+                            <p>Digitales Höhenmodell zur Verfügung gestellt von der Europäischen Union im Rahmen des Copernicus Programms.</p>
+                            <p>Die Screenshots sind als Backup gedacht falls die Live Vorführung nicht klappt.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Download</h2>
+                        <img style="height: 600px;" src="./images/screenshot_eudem_download.png" alt="Download" title="Download"/>
+                        <aside class="notes">
+                            <p>Der Download funktioniert via Web Coverage Server (WCS) Protokoll.</p>
+                            <p>Area of Interest wurde bereits ausgewählt und ist in Orange sichtbar.</p>
+                            <p>Der Download Dialog erlaubt das Festlegen von gewünschtem Format und gewünschter Projektion.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Downloaded</h2>
+                        <img style="height: 600px;" src="./images/screenshot_eudem_downloaded.png" alt="Downloaded" title="Downloaded"/>
+                        <aside class="notes">
+                            <p>Diese Screenshot zeigt ein heruntergeladenes Subset in QGis.</p>
+                            <p>Die Daten stehen als float32 Werte zur weiteren Verarbeitung zur Verfügung z.B. 210,94 m.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>EU-DEM</h2>
+                        <ul>
+                            <li>INSPIRE View &amp; Download Service Prototyp<br/>via WMS/WMTS und WCS</li>
+                            <li>Verfügbar als Open Data</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Fazit</h2>
+                    <ul>
+                        <li class="fragment">Es existieren ausgereifte Open Source Software Komponenten bereit für den operationalen Einsatz</li>
+                        <li class="fragment">Anpassungen und Erweiterungen sind in Open Source Software Komponenten äußerst einfach möglich</li>
+                        <li class="fragment">Neue Funktionalität fließt zurück und steht allen zur Verfügung</li>
+                        <li class="fragment">Open Data verfügbar</li>
+                        <li class="fragment">Die Zeitachse ist und wird immer wichtiger</li>
+                    </ul>
+                    <aside class="notes">
+                        <p></p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Danksagung</h2>
+                    <a href="http://esa.int"><img src="./images/ESA_Logo.png" alt="European Space Agency - ESA" title="European Space Agency - ESA"/></a>
+                    <p>Die Europäische Weltraumorganisation (ESA) hat im Rahmen des ngEO Projektes dazu beigetragen die verwendeten Open Source Lösungen maßgeblich weiterzuentwickeln.</p>
+                    <aside class="notes">
+                        <p>Ich möchte mich bei der Europäischen Weltraumorganisation (ESA) bedanken die im Rahmen des ngEO Projektes dazu beigetragen hat die verwendeten Open Source Lösungen maßgeblich weiterzuentwickeln.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Vielen Dank für Ihre Aufmerksamkeit</h2>
+                    <br/>
+                    <a class="image" href="http://eox.at"><img src="./images/EOX_Logo.png" alt="EOX IT Services GmbH, Austria" title="EOX IT Services GmbH, Austria"/></a>
+                    <p><a href="mailto:office@eox.at">office@eox.at</a> <a href="https://twitter.com/eox_a">@eox_a</a></p>
+                    <p>Stephan Meißl <a href="mailto:stephan.meissl@eox.at">stephan.meissl@eox.at</a> <a href="https://twitter.com/Schpidi">@Schpidi</a></p>
+                    <p></p>
+                    <br/>
+                    <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin:0 0 12px 0;" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><small>&nbsp;This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</small></p>
+                    <aside class="notes">
+                        <p>Vielen Dank für Ihre Aufmerksamkeit!</p>
+                        <p>Gibt es Fragen?</p>
+                    </aside>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="reveal.js/lib/js/head.min.js"></script>
+        <script src="reveal.js/js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                keyboard: true,
+                touch: true,
+                overview: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
