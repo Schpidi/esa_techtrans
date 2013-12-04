@@ -48,19 +48,22 @@
                     <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin:0 0 12px 0;" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><small>&nbsp;This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</small></p>
                     <aside class="notes">
                         <p>Sehr geehrte Damen und Herren. Vielen Dank für die Einladung hier heute einige Highlights unserer Arbeit zu präsentieren.</p>
-                        <p></p>
+                        <p>Für mich ist es heute eine etwas ungewohnte Situation auf Deutsch zu präsentieren, daher verzeihen Sie bitte falls ich englische Begriffe und Bezeichnungen verwende.</p>
                     </aside>
                 </section>
 
                 <section>
                     <h2>Inhalt</h2>
                     <ul>
-                        <li class="fragment">ESA User Services - ngEO</li>
-                        <li class="fragment">EOX Maps</li>
-                        <li class="fragment">EU-DEM</li>
+                        <li>ESA User Services - ngEO</li>
+                        <li>EOX Maps</li>
+                        <li>EU-DEM</li>
                     </ul>
                     <aside class="notes">
-                        <p></p>
+                        <p>Ich werde Ihnen heute drei Highlights vorstellen.</p>
+                        <p>Als erstes das ngEO Projekt der Europäischen Weltraumorganisation (ESA). ngEO steht für "Earth Observation User Services Next Generation", ah da ist es schon das Englisch :)</p>
+                        <p>Als nächstes werde ich Ihnen unser Karten-Projekt "EOX Maps" vorstellen welches als ersten Kunden die ESA in ngEO hat.</p>
+                        <p>Außerdem möchte ich einen speziellen Datensatz der Europäischen Union vorstellen, das sogenannte EU-DEM, ein digitales Höhenmodell für die 39 Mitgliedstaaten der Europäischen Umweltagentur (EEA).</p>
                     </aside>
                 </section>
 
@@ -69,9 +72,11 @@
                         <h2><a href="http://v1.ngeo.eox.at/">Live Demonstration ngEO</a></h2>
                         <p><a href="http://v1.ngeo.eox.at/"><img style="height: 600px;" src="./images/screenshot_ngeo_start.png" alt="Live Demonstration ngEO" title="Live Demonstration ngEO"/></a></p>
                         <aside class="notes">
-                            <p>Bitte um Nachsicht, dieses Service ist gerade erst im Entstehen und daher nicht besonders stabil.</p>
+                            <p>Ich werde nun versuchen eine Live Vorführung des ngEO Web Clients zu geben und hoffe das WLan ist schnell genug.</p>
+                            <p>Vielleicht können jetzt kurz alle aufhören Youtube Videos zu schauen, Twitter Nachrichten verschicken sollte OK sein ;)</p>
+                            <p>Bitte um Nachsicht, dieses Service ist gerade erst im Entstehen und daher nicht immer stabil.</p>
                             <p>Die Screenshots sind als Backup gedacht falls die Live Vorführung nicht klappt.</p>
-                            <p>Hier können Sie den ngEO Client nach dem Starten sehen. Es ist noch kein Datensatz ausgewählt und keine Such durchgeführt.</p>
+                            <p>Hier können Sie den ngEO Client nach dem Starten sehen. Es ist noch kein Datensatz ausgewählt und keine Suche durchgeführt.</p>
                             <p>Bitte merken Sie sich die Karte im Hintergrund, dazu komme ich später noch genauer.</p>
                         </aside>
                     </section>
@@ -99,16 +104,16 @@
                     <section>
                         <h2>ESA User Services - ngEO</h2>
                         <ul>
-                            <li class="fragment">Operational Fully Online Data Access Service</li>
-                            <li class="fragment">GMES and ESA Legacy Satellite Missions</li>
-                            <li class="fragment">Fully Centralised Configuration Management</li>
-                            <li class="fragment">Generic System usable for any Mission</li>
+                            <li class="fragment">Operationales Service für den Online Zugang zu EO Daten</li>
+                            <li class="fragment">Daten von GMES und ESA Satelliten Missionen</li>
+                            <li class="fragment">Generisches System zur generellen Verwendung</li>
                         </ul>
                         <aside class="notes">
-                            <p>The main objective of the new ESA User Services is to provide a fully Online Operational Data Access Service.</p>
-                            <p>ESA provides access to satellite data from the European initiative GMES which stands for Global Monitoring for Environment &amp; Security or, as it is called nowadays, Copernicus as well as ESA's legacy missions like Envisat.</p>
-                            <p>Another objective of the new system is a Fully Centralised Configuration Management. I come back to that in a second.</p>
-                            <p>In summary ESA wants to develop a generic system that is easily usable for any mission.</p>
+                            <p>Das Hauptziel der neuen ESA Dienste für Nutzer von Erdbeobachtungsdaten ist es einen operationalen Online Zugang zu den Daten bereitzustellen.</p>
+                            <p>Die verfügbaren Erdbeobachtungsdaten werden sowohl die Aufnahmen der GMES Satelliten als auch aller anderen ESA Satelliten Missionen sein.</p>
+                            <p>GMES, kurz für "Global Monitoring for Environment &amp; Security", oder Copernicus ist die Europäischen Initiative für Erdbeobachtung. Dabei werden fünf verschiedene Arten von Satelliten die sogenannten Sentinels betrieben werden. Die Starts der ersten 3 sind für nächstes Jahr geplant.</p>
+                            <p>ESA managt die Entwicklung eines generischen Systems, dass auch für andere Missionen zur Verfügung steht.</p>
+                            <p>Wie schon gesagt, EOX ist im Rahmen dieser Entwicklung für den sogenannten Browse Server verantwortlich.</p>
                         </aside>
                     </section>
                     <section>
@@ -118,10 +123,10 @@
                             <ul>
                                 <li>Ausschließlich basierend auf Open Source Software wie</li>
                                 <ul>
-                                    <li><a href="http://gdal.org">GDAL</a> für raster prozessing</li>
-                                    <li><a href="http://mapserver.org">MapServer</a> für OGC Unterstützung</li>
-                                    <li><a href="http://eoxserver.org">EOxServer</a> für Erdbeobachtungserweiterungen der OGC Standards</li>
-                                    <li><a href="http://mapserver.org/mapcache/index.html">MapCache</a> für extrem hochperformanten WMTS und WMS Zugang</li>
+                                    <li><a href="http://gdal.org">GDAL</a> für die Verarbeitung von Rasterdaten</li>
+                                    <li><a href="http://mapserver.org">MapServer</a> für die Unterstützung von standardkonformen Services</li>
+                                    <li><a href="http://eoxserver.org">EOxServer</a> für die Erdbeobachtungserweiterungen der OGC Standards</li>
+                                    <li><a href="http://mapserver.org/mapcache/index.html">MapCache</a> für extrem hochperformante WMTS und WMS Services</li>
                                 </ul>
                                 <li>Standardkonforme Auslieferung von Karten und Vorschaubildern (Browse Images) via OGC WMTS und WMS</li>
                                 <li>Zentrales Konfigurationsmanagement durch ngEO Controller</li>
@@ -132,26 +137,28 @@
                         </aside>
                     </section>
                     <section>
-                        <h2>Preprocessing</h2>
+                        <h2>Verarbeitung von Rasterdaten</h2>
                         <ul>
-                            <li class="fragment">Input Geographic Metadata for Geo-referencing</li>
-                            <ul class="fragment">
-                                <li>Footprint polygon</li>
-                                <li>Regular grid of tiepoints</li>
-                                <li>Pre-georeferenced images</li>
-                            </ul>
-                            <li class="fragment">Optimizations</li>
-                            <ul class="fragment">
-                                <li>Footprint generation</li>
-                                <li>Re-projection</li>
-                                <li>Addition of alpha-channel</li>
-                                <li>Internal tilling</li>
-                                <li>Overviews</li>
-                                <li>Compression</li>
-                            </ul>
+                            <li class="fragment">Geographische Metadaten für die Geo-Referenzierung
+                                <ul>
+                                    <li>Polygon des Grundrisses</li>
+                                    <li>Reguläres Gitter von Referenzpunkten</li>
+                                    <li>Geo-referenzierte Bilder</li>
+                                </ul>
+                            </li>
+                            <li class="fragment">Optimierungen
+                                <ul>
+                                    <li>Berechnung des Grundrisses</li>
+                                    <li>Umprojizieren</li>
+                                    <li>Hinzufügen eines Alpha-Bandes</li>
+                                    <li>Interne Kachelung</li>
+                                    <li>Übersichtsbilder</li>
+                                    <li>Komprimierung</li>
+                                </ul>
+                            </li>
                         </ul>
                         <aside class="notes">
-                            <p>TBD</p>
+                            <p>Ein kleiner Ausschnitt der Aufgaben des Browse Servers zur Verarbeitung von Rasterdaten.</p>
                         </aside>
                     </section>
                 </section>
@@ -161,8 +168,7 @@
                         <h2><a href="http://maps.eox.at">Live Demonstration EOX Maps</a></h2>
                         <a href="http://maps.eox.at"><img style="height: 600px;" src="./images/screenshot_eoxmaps.png" alt="Live Demonstration EOX Maps" title="Live Demonstration EOX Maps"/></a>
                         <aside class="notes">
-                            <p>Ich werde nun versuchen eine Live Vorführung unserer EOX Maps zu geben und hoffe das WLan ist schnell genug.</p>
-                            <p>Vielleicht können jetzt kurz alle aufhören Youtube Videos zu schauen, Facebook und Twitter ist OK ;)</p>
+                            <p>Ich werde wieder versuchen eine Live Vorführung diesmal unserer EOX Maps zu geben.</p>
                             <p>Die Screenshots sind als Backup gedacht falls die Live Vorführung nicht klappt.</p>
                             <p>Hier sehen Sie im übrigen unseren Terrain Layer oder auch Geländekarte, basierend unter anderem auf OpenStreetMap, EU-DEM (siehe später), und GlobCover Daten und von EOX designed. Diese Daten sind alle sogenannte Open Data also frei verfügbar.</p>
                         </aside>
@@ -238,7 +244,9 @@
                         <h2><a href="http://data.eox.at/eudem">Live Demonstration EU-DEM</a></h2>
                         <p><a href="http://data.eox.at/eudem"><img style="height: 600px;" src="./images/screenshot_eudem.png" alt="Live Demonstration EU-DEM" title="Live Demonstration EU-DEM"/></a></p>
                         <aside class="notes">
-                            <p>Digitales Höhenmodell zur Verfügung gestellt von der Europäischen Union im Rahmen des Copernicus Programms.</p>
+                            <p>Digitales Höhenmodell für die 39 Mitgliedstaaten der Europäischen Umweltagentur (EEA) zur Verfügung gestellt von der Europäischen Union im Rahmen des Copernicus oder GMES Programms.</p>
+                            <p>Die geographische Auflösung beträgt 1 arc-second also ungefähr 30 Meter. </p>
+                            <p>Wie schon erwähnt, verwenden wir diesen Datensatz für unseren Terrain Layer.</p>
                             <p>Die Screenshots sind als Backup gedacht falls die Live Vorführung nicht klappt.</p>
                         </aside>
                     </section>
